@@ -1,2 +1,2 @@
 #!/bin/sh
-echo This is a bash script > /thisTest.txt
+echo This is a bash script > /root/thisTest.txt
