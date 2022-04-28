@@ -1,2 +1,2 @@
 #!/bin/sh
-echo This is a bash script
+echo This is a bash script > /thisTest.txt
