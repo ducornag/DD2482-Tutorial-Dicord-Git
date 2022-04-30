@@ -21,13 +21,7 @@
     "finish": {
       "text": "finish.md"
     },
-    "assets": {
-      "host01" : {
-        "file": "Bot_public.py",
-        "target": "/root/",
-        "chmod": "+rwx"
-      }
-    }
+    "assets": { "host01": [ {"file": "*", "target": "/root"} ] }
   },
   "environment": {
     "uilayout": "vscode-terminal-split"
