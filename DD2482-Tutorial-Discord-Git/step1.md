@@ -27,7 +27,7 @@ Go to the settings page of your repo and select the webhook page as there.
 ![Next](./assets/short.png)  
 There add a webhook. You will get the follwing window:
 ![window](./assets/ghhk.png)  
-There, paster your url (`example_url.com` for our example), and add `/github` ath the end.  
+There, paste your url (`example_url.com` for our example), and add `/github` at the end.  
 Make sure to have the other settings in the same way as the example.  
 Then add the webhook.
 
@@ -35,7 +35,7 @@ Then add the webhook.
 
 ## But we can do more
 
-You can see that this implementation is very basic. You could maybe filter what kind of event appears, but it will be difficult to do more complex things, like interracting with the repo from the channel, or changing the way the information is displayed in the message. So you can write your own bot! That is what we'll do in the next step!
+You can see that this implementation is very basic. You could maybe filter what kind of event appears, but it will be difficult to do more complex things, like interacting with the repo from the channel, or changing the way the information is displayed in the message. So you can write your own bot! That is what we'll do in the next step!
 
 Next:
 Does this work? `echo This is a test`{{execute}}
