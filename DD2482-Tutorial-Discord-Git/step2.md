@@ -22,7 +22,8 @@ The `SCOPES` window gives you an URL; it is the one used to invite a bot in your
 ## Writing the bot
 
 We write the bot in Python, so we need the API of Discord for Python. Add it to the environment with `pip install -U discord.py`{{execute}}.  
-You can check that the installation was successful with `pip list | grep discord.py`{{execute}}, which should tell you which version has been installed.  
+We also need a way to communicate with Github. For that we use `pip install -U PyGithub`
+You can check that the installation was successful with `pip list | egrep 'discord.py|Pygithub'`{{execute}}, which should tell you which version has been installed for **both** packages..  
 
 Open the code for our bot with `Bot_public.py`{{open}}.  
 
