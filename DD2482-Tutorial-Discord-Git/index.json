@@ -22,7 +22,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "client" : {
+      "host01" : {
         "file": "Bot_public.py",
         "target": "/root/",
         "chmod": "+rwx"
