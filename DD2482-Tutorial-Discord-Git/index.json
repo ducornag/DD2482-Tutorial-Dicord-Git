@@ -20,10 +20,17 @@
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host1" : {
+        "file": "Bot_public.py",
+        "target": "/root/",
+        "chmod": "+rwx"
+      }
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "vscode-terminal-split"
   },
   "backend": {
     "imageid": "python:3.8"
