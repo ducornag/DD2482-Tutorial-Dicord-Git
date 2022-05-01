@@ -6,7 +6,7 @@ It is focused on PRs but could easily be extended to include other Github functi
 A number of entities use Discord for internal communication as an alternative to Slack. A bot can be used to help keep information in a single place and automate some processes. In our example, developers won't have to periodically check the PRs, they will be notified by a message, and will be able to deal with them directly in Discord. All of this integrates in the concept of ChatOps.
 
 ## What you will learn
-After this tutorial, you should be familiar with some basics of the Discord API in Python, and some of the REST Github API, and how to use the two together to handle PRs
+After this tutorial, you should be familiar with some basics of the Discord API in Python, and some of the REST Github API, and how to use the two together to handle PRs.  
 It should give you a basis on which to continue adding more functionalities thanks to the documentation.
 
 ## Plan

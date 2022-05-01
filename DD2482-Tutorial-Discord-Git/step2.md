@@ -3,7 +3,7 @@
 We now want to implement more implement more interaction, especially with PRs.  
 *We chose PRs but if you read the documentation of the API, you can do a lot of other aspects!*  
 For that, we want more than just displaying PRs as they come. We will focus on three aspects.
-- Giving the list of currently opened PRS  
+- Giving the list of currently opened PRs  
 - Creating a new PR  
 - Accepting or refusing a PR directly in Discord
 
@@ -17,9 +17,9 @@ Now we're truly getting started! To create your bot account go to https://discor
 Log in and create a new application, and once you have selected the name, go to the `Bot` tab and add a new bot.
 Lower in the page you have permissions. There are the one we are using.  
 ![perm](./assets/botauth.png)  
-They may not be all relevant to what you are doing, or you may need more to add more functionalities, so change them accordingly to what you want to do. Tick administrator for all of them, but be wary: the bot will be able to do anything, so if the bot token leaks, this may be very bad for the server!
+They may not be all relevant to what you are doing, or you may need more to add more functionalities, so change them accordingly to what you want to do. Tick administrator for all of them, but be wary: the bot will be able to do anything, so if the bot token leaks, this may be very bad for the server!  
 To invite your bot in your server, go to the `OAuth2` tab (just above the bot tab in the tab list).  
-Tick the `bot` option in the `SCOPES` window, and add the pertinent permissions in the window below it. In our case it will be the same as for the bot itself (as the bot is the application).
+Tick the `bot` option in the `SCOPES` window, and add the pertinent permissions in the window below it. In our case it will be the same as for the bot itself (as the bot is the application).  
 At the bottom of the page there is an url; it is the one used to invite a bot in your server. Copy it and open in your browser, and select the same server in which you created your webhook in the previous step, as we will use it for some functionalities.  
 
 ## Writing the bot
@@ -38,9 +38,9 @@ You will need to change some things with information specific to your bot/repo:
 You'll need to paste your Github token at the start of the code (line 14), and the bot's token at the end of the code (line 102).  
 
 In order to get the first one, go to your Github's account settings, and choose Developer settings (the last tab, as such:)  
-![gitkey](./assets/ghkey.png)
+![gitkey](./assets/ghkey.png)  
 There, go to Personal access tokens and Generate a new token.  
-Make sure to give appropriate authorisations and **do not share it, and delete after this tutorial if you don't need it anymore**
+Make sure to give appropriate authorisations and **do not share it, and delete after this tutorial if you don't need it anymore**  
 For example:  
 ![PAC](./assets/gitpac.png)  
 and
@@ -52,9 +52,9 @@ We use repo to handle our repos. Feel free to put a shorter expiration if you do
 Copy it immediately into the code, as you won't be able to see it afterwards.
 
 For the bot's token, go to the same page where you created the bot, go to its page and you will find its token there. Reset the token if necessary.  
-Again, copy it immediately into the code, as you won't be able to see it afterwards.
+Again, copy it immediately into the code, as you won't be able to see it afterwards unless you reset the token.  
 
-**Again, make sure you keep it safe**
+**Again, make sure you keep it safe**  
 
 Once this has been done, your bot is ready for use!  
 But we'll first try to understand what it does.

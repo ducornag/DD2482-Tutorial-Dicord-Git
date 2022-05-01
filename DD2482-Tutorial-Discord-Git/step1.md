@@ -26,7 +26,7 @@ We now need to tell Github to publish information on that URL.
 Go to the settings page of your repo and select the webhook page as there.
 ![Next](./assets/short.png)  
 There add a webhook. You will get the follwing window:
-![window](./assets/ghhk.png)  
+![window](./assets/ghhk1.png)  
 There, paste your url (`example_url.com` for our example), and add `/github` at the end.  
 We will just look at the PRs for now, so make sure this is the only one checked, like this:  
 ![checkbox](./assets/ghhkpr.png)  
