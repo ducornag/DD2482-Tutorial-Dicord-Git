@@ -1,13 +1,36 @@
+import aiohttp
+import io
 import discord
 from discord import Message, Reaction
 from github import Github, GithubException
 import re
 import shlex
+import random
 
 # Init
+
 client = discord.Client()
 print(client.intents)
 g = Github("<GITHUB_TOKEN>")
+
+urls = ["https://i1.theportalwiki.net/img/6/64/Wheatley_bw_a4_death_trap_escape05.wav",
+        "https://i1.theportalwiki.net/img/c/c3/Space_core_space21.wav",
+        "https://i1.theportalwiki.net/img/4/49/Space_core_space11.wav",
+        "https://i1.theportalwiki.net/img/5/57/Space_core_babbleb11.wav",
+        "https://i1.theportalwiki.net/img/0/0b/Adventure_core_babble01.wav",
+        "https://i1.theportalwiki.net/img/9/92/Adventure_core_singing02.wav",
+        "https://i1.theportalwiki.net/img/c/c4/Adventure_core_spaceresponse05.wav",
+        "https://i1.theportalwiki.net/img/d/dc/Fact_core_fact52.wav",
+        "https://i1.theportalwiki.net/img/e/e5/Fact_core_fact65.wav",
+        "https://i1.theportalwiki.net/img/1/1c/Fact_core_fact46.wav",
+        "https://i1.theportalwiki.net/img/5/5b/Portal2-13-Want_You_Gone.mp3"]
+
+
+async def provide_easter_egg(index):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(urls[index]) as resp:
+            data = io.BytesIO(await resp.read())
+            return data
 
 
 @client.event
@@ -71,5 +94,9 @@ async def on_message(message: Message):
         prs = "\n".join(pr.title + ": " + pr.html_url for pr in repo.get_pulls().get_page(0))
         await message.channel.send(prs if len(prs) > 0 else "There is no pull requests")
 
+    if args[0] == '$easter_egg':
+        index = random.randint(0, len(urls) - 1)
+        data = await provide_easter_egg(index)
+        await message.channel.send(file=discord.File(data, f'easter_egg_{index+1}.wav'))
 
 client.run("<DISCORD_TOKEN>")
