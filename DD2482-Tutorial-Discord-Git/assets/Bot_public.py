@@ -75,7 +75,7 @@ async def on_message(message: Message):
     if args[0] == '$help':
         await message.channel.send('_Commands:_ \n'
                                    '$create_pr <base> <head> <title> <content> [repo (default \'devops-course\')]\n'
-                                   '$list_pr\n'
+                                   '$list_pr [repo (default \'devops-course\')]\n'
                                    '$help')
 
     if args[0] == '$create_pr':
