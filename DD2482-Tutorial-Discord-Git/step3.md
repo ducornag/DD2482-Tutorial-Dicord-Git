@@ -23,7 +23,8 @@ Tick the `bot` option in the `SCOPES` window, and add the pertinent permissions 
 At the bottom of the page there is an url; it is the one used to invite a bot in your server. Copy it and open in your browser, and select the same server in which you created your webhook in the previous step, as we will use it for some functionalities.  
 
 We will need the bot's token in our code so that it know which bot it represents:  
-On where you created the bot, go to its page and you will find its token there. Reset the token if necessary.  
+On where you created the bot, go to its page and you will find its token there. Reset the token if necessary. See the following image.   
+![disctok](./assets/bttk.png)
 Copy it immediately into tokens.py (`tokens.py`{{open}}), as you won't be able to see it afterwards unless you reset the token.  
 
 **Again, make sure you keep it safe**  
