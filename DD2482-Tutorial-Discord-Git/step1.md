@@ -1,42 +1,41 @@
-# Setting up the environment and webhooks
+# Setting up the repo and access to the repo
 
-For this section the terminal and the editor will not be used, you will be asked to perform tasks in your browser.
+In order to do anything with Github, we obviously need a repo to monitor and publish PRs in.  
+We will also need a token so that the bot can work on that repo.  
+The bot will have access to quite a lot on the repos on your Github account. It won't do anything bad, but if you prefer erring towards the side of caution, feel free to use a less important account.
 
-## Setup
+## Opening a new repo
 
-For the tutorial to function you will need a Discord server, and a Github repo which the bot will monitor.  
-For this tutorial we will assume you know the basics of Discord and Github (creating a server/channel in the server, and how to open PRs, and so on).  
-For the both of them, the web browser version should be enough.  
+On your account open a new public repo.  
+Then put its name in tokens.py (open it with `tokens.py`{{open}}), on the def_repo_name field.  
+This name will be the default repo name for the rest of the tutorial.
 
-## Creating the webhook
+## Adding the Github token
 
-The webhook is an url that will transmit information when some actions are performed on the repo. Discord is able to interpret that information and publish the information on what happened.  
+We will need a Github token for the bot to manage the PRs on the repo.   
 
-We first need to tell Discord to create a webhook that Github will use to send information. For that, go to a channel in your server, and open its settings (the cogwheel when the channel is selected).  
-Then navigate to integrations, and webhook, as such.  
-![dcd](./assets/dcdhk.png)
-Then create the webhook, give it a name and check if the channel it will publish on is the correct one (change it if that is not the case), and copy the webhook's URL.  
-**Be careful if you are to set a webhook on an actual server: don't divulgate the URL as someone with it will be able to publish messages to the channel without being invited**  
-Discord will now listen to what is said on that URL.  
+You'll need to paste your Github token in tokens.py (`tokens.py`{{open}}), inside the Github() function of the g variable.
 
-## Publishing on the webhook
+In order to get the token, go to your Github's account settings, and choose Developer settings (the last tab, as such:)  
+![gitkey](./assets/ghkey.png)  
+There, go to Personal access tokens and Generate a new token.  
+Make sure to give appropriate authorisations and **do not share it, and delete after this tutorial if you don't need it anymore**  
+For example:  
+![PAC](./assets/gitpac.png)  
+and
+![PAC1](./assets/gitpac1.png)  
+We use repo to handle our repos. Feel free to put a shorter expiration if you don't want it to last (or just delete it yourself at the end).
 
-We now need to tell Github to publish information on that URL.  
+**This will handle your whole account, so make sure you know what you are doing in terms of authorisations**
 
-Go to the settings page of your repo and select the webhook page as there.
-![Next](./assets/short.png)  
-There add a webhook. You will get the follwing window:
-![window](./assets/ghhk1.png)  
-There, paste your url (`example_url.com` for our example), and add `/github` at the end.  
-We will just look at the PRs for now, so make sure this is the only one checked, like this:  
-![checkbox](./assets/ghhkpr.png)  
-And add the webhook.  
-![validate](./assets/ghhkok.png)
+Copy it immediately into the code, as you won't be able to see it afterwards.
 
-**Everything should now work!**
+## Validating step 1
 
-Feel free to try to add a PR to test it!
+We wrote this tutorial with Python, so we will need the API of Discord for Python. Add it to the environment with `pip install -U discord.py`{{execute}}.  
+We also need a way to communicate with Github. For that we use `pip install -U PyGithub`{{execute}}
+You can check that the installation was successful with `pip list | egrep 'discord.py|PyGithub'`{{execute}}, which should tell you which version has been installed for **both** packages.
 
-## But we can do more
-
-You can see that this implementation is very basic. You could maybe filter what kind of event appears, but it will be difficult to do more complex things, like interacting with the repo from the channel, or changing the way the information is displayed in the message. So you can write your own bot! That is what we'll do in the next step!
+In order to see if everything up to that point has been done successfully, we will try to create a new PR.  
+Run `python3 create_PR.py`{{execute}} to do it.  
+You should see a new PR in your repo.

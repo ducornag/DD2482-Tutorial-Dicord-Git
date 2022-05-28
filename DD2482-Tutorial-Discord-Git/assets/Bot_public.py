@@ -6,12 +6,12 @@ from github import Github, GithubException
 import re
 import shlex
 import random
+from tokens import g, discord_token, def_repo_name
 
 # Init
 
 client = discord.Client()
 print(client.intents)
-g = Github("<GITHUB_TOKEN>")
 
 urls = ["https://i1.theportalwiki.net/img/6/64/Wheatley_bw_a4_death_trap_escape05.wav",
         "https://i1.theportalwiki.net/img/c/c3/Space_core_space21.wav",
@@ -58,6 +58,7 @@ async def on_reaction_add(reaction: Reaction, user):
         elif reaction.emoji == "❌":
             pr.edit(state="closed")
             # await message.channel.send("PR closed: " + url)
+        #This may be a hint comment for exercise 2
 
 
 @client.event
@@ -74,29 +75,32 @@ async def on_message(message: Message):
 
     if args[0] == '$help':
         await message.channel.send('_Commands:_ \n'
-                                   '$create_pr <base> <head> <title> <content> [repo (default \'devops-course\')]\n'
-                                   '$list_pr [repo (default \'devops-course\')]\n'
+                                   '$create_pr <base> <head> <title> <content> [repo (default \'' + def_repo_name + '\')]\n'
+                                   '$list_pr [repo (default \'' + def_repo_name + '\')]\n'
                                    '$help')
+
+    #This may be a hint comment for exercise 1
 
     if args[0] == '$create_pr':
         if len(args) <= 4:
-            await message.channel.send('Command usage:  `$create_pr <base> <head> <title> <content> [repo (default '
-                                       'devops-course)]`')
+            await message.channel.send('Command usage:  `$create_pr <base> <head> <title> <content> [repo (default \'' + def_repo_name + '\')]`')
         else:
-            repo = g.get_user().get_repo("devops-course" if len(args) <= 5 else args[5])
+            repo = g.get_user().get_repo(def_repo_name if len(args) <= 5 else args[5])
             try:
                 pr = repo.create_pull(args[3], args[4], args[1], args[2])
             except GithubException as e:
                 await message.channel.send(e.data["message"] + ": " + e.data["errors"][0]["message"])
 
     if args[0] == '$list_pr':
-        repo = g.get_user().get_repo("devops-course" if len(args) <= 1 else args[1])
+        repo = g.get_user().get_repo(def_repo_name if len(args) <= 1 else args[1])
         prs = "\n".join(pr.title + ": " + pr.html_url for pr in repo.get_pulls().get_page(0))
         await message.channel.send(prs if len(prs) > 0 else "There is no pull requests")
+
+    #This may be a hint comment for exercise 3
 
     if args[0] == '$easter_egg':
         index = random.randint(0, len(urls) - 1)
         data = await provide_easter_egg(index)
         await message.channel.send(file=discord.File(data, f'easter_egg_{index+1}.wav'))
 
-client.run("<DISCORD_TOKEN>")
+client.run(dicord_token)

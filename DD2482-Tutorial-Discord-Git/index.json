@@ -12,6 +12,22 @@
       {
         "title": "Step 2",
         "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6",
+        "text": "step6.md"
       }
     ],
     "intro": {
@@ -20,7 +36,13 @@
     "finish": {
       "text": "finish.md"
     },
-    "assets": { "host01": [ {"file": "Bot_public.py", "target": "/root"} ] }
+    "assets": { "host01": [ {"file": "Bot_public.py", "target": "/root"},
+                            {"file": "tokens.py", "target": "/root"},
+                            {"file": "create_PR.py", "target": "/root"},
+                            {"file": "solution_1.py", "target": "/root"},
+                            {"file": "solution_2.py", "target": "/root"},
+                            {"file": "solution_3.py", "target": "/root"}
+                            ] }
   },
   "environment": {
     "uilayout": "vscode-terminal-split"

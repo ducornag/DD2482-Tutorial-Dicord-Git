@@ -9,6 +9,11 @@ A number of entities use Discord for internal communication as an alternative to
 After this tutorial, you should be familiar with some basics of the Discord API in Python, and some of the REST Github API, and how to use the two together to handle PRs.  
 It should give you a basis on which to continue adding more functionalities thanks to the documentation.
 
+## Requirements
+For this tutorial, we only require you to know the basics of Github and Discord (creating a server/channel in the server, and how to open PRs, and so on), and the basics of Python.
+
+For both Github and Discord, the web version of the service should be enough.
+
 ## Plan
 The first step of this tutorial will guide you to make a repo and setting it up in order to enable handling by the bot, how to enable and invite bots on Discord, and will show you an easy way of doing a basic interaction between the bot and Github thanks to webhooks.  
 The second step will show you how you can write a bot to handle PRs in such a way that you can control what you want to do with them.
