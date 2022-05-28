@@ -11,9 +11,9 @@ It is easy to create new commands: here is an exercise for that:
 Try to add a command! For example, for `$hello`, try to make the bot send the message `Hi @user!` that greets the user sending the command. Modify the bot, and the stop it (with CTRL+C), and restart it with the command given below.
 
 *Hint1: You need to add it alongside the other commands. The syntax will be very similar than the `$help` command*  
-*Hint2: The user who sent the message is available in the data structure of the message. Explore the documentation to find where; we also already use it in our code, and you can explore how to address the person in particular with the given info*
+*Hint2: The user who sent the message is available in the data structure of the message. Explore the documentation to find where; we also already use it in our code, and you can explore how to address the person in particular with the given info*  
 *Solution: look at solution_1.py, and add the code where the hint comment for exercise 1 is. You may need to not take the first indentation when you copy in order to have the right indentation when you paste*
 
 Restart the code: `python3 Bot_public.py`{{execute}}  
-Reopen the bot's code: `Bot_public.py`{{open}}
+Reopen the bot's code: `Bot_public.py`{{open}}  
 Open the solution: `solution_1.py`{{open}}

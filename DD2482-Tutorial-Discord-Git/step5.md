@@ -18,5 +18,5 @@ Try to add a new reaction! For example, if a user adds a question mark emoji as 
 *Solution: look at solution_2.py, and add the code where the hint comment for exercise 2 is. Don't forget to stop and restart the bot*  
 
 Restart the code: `python3 Bot_public.py`{{execute}}  
-Reopen the bot's code: `Bot_public.py`{{open}}
+Reopen the bot's code: `Bot_public.py`{{open}}  
 Open the solution: `solution_2.py`{{open}}

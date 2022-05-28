@@ -32,9 +32,10 @@ Copy it immediately into the code, as you won't be able to see it afterwards.
 
 ## Validating step 1
 
-We wrote this tutorial with Python, so we will need the API of Discord for Python. Add it to the environment with `pip install -U discord.py`{{execute}}.  
-We also need a way to communicate with Github. For that we use `pip install -U PyGithub`{{execute}}
-You can check that the installation was successful with `pip list | egrep 'discord.py|PyGithub'`{{execute}}, which should tell you which version has been installed for **both** packages.
+We wrote this tutorial with Python, so we will need the API of Discord for Python.  
+Add it to the environment with `pip install -U discord.py`{{execute}}.  
+We also need a way to communicate with Github. For that we use `pip install -U PyGithub`{{execute}}  
+You can check that the installation was successful with `pip list | egrep 'discord.py|PyGithub'`{{execute}}, which should tell you which version has been installed for **both** packages.  
 
 In order to see if everything up to that point has been done successfully, we will try to create a new PR.  
 Run `python3 create_PR.py`{{execute}} to do it.  
