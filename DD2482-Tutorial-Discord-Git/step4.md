@@ -1,4 +1,4 @@
-# General Overview : adding commands to the bot
+# Adding commands to the bot
 
 We want to first focus on the `$help` command. Look at line 75. You see that the parent in the execution tree is the `on_message` function, which is a discord api function that is triggered when a message is sent on a channel in the server the bot is in. You see that if the content of the message is `$help`, then it sends a message with all the possible commands.
 

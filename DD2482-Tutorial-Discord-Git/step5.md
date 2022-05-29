@@ -1,4 +1,4 @@
-# General Overview : adding actions based on reactions on messages
+# Adding actions based on reactions on messages
 
 We also have another big part of the code that is the `on_reaction_add` function. Can you guess what it does?
 
