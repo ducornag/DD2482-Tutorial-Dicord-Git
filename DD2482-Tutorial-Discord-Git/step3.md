@@ -18,7 +18,7 @@ Log in and create a new application, and once you have selected the name, go to 
 Lower in the page you have permissions. There are the one we are using.  
 ![perm](./assets/botauth.png)  
 They may not be all relevant to what you are doing, or you may need more to add more functionalities, so change them accordingly to what you want to do. Tick administrator for all of them, but be wary: the bot will be able to do anything, so if the bot token leaks, this may be very bad for the server!  
-To invite your bot in your server, go to the `OAuth2` tab (just above the bot tab in the tab list).  
+To invite your bot in your server, go to the `OAuth2` tab (just above the bot tab in the tab list), and then to the URL generation sub-tab.  
 Tick the `bot` option in the `SCOPES` window, and add the pertinent permissions in the window below it. In our case it will be the same as for the bot itself (as the bot is the application).  
 At the bottom of the page there is an url; it is the one used to invite a bot in your server. Copy it and open in your browser, and select the same server in which you created your webhook in the previous step, as we will use it for some functionalities.  
 
@@ -33,7 +33,7 @@ Copy it immediately into tokens.py (`tokens.py`{{open}}), as you won't be able t
 
 Make sure you've installed what was necessary in the previous step (`pip install -U discord.py`{{execute}} and `pip install -U PyGithub`{{execute}}, and `pip list | egrep 'discord.py|PyGithub'`{{execute}} to make sure both are installed)
 
-Run the bot with `python3 Bot_public.py`{{execute}}.  
+Run the bot with `python3 Bot_public.py &`{{execute}}.  
 And then on your server use the following command `$help`.  
 You should get a message from the bot listing (nearly) all the commands available in the server.  
 We will explain how it works in the next step.  

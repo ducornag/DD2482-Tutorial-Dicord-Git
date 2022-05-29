@@ -103,4 +103,4 @@ async def on_message(message: Message):
         data = await provide_easter_egg(index)
         await message.channel.send(file=discord.File(data, f'easter_egg_{index+1}.wav'))
 
-client.run(dicord_token)
+client.run(discord_token)

@@ -4,13 +4,15 @@ We will now ask you to combine what you have done until now
 
 ## Third Exercise
 
-Try to add a command that, with the given arguments, creates a comment on a given PR.
+Try to add a command that, with the given arguments, creates a comment on a given PR.  
+Again here are the commands to kill and restart the bot for the changes to be effective  
+Kill the bot: `pkill -9 -f Bot_public.py`{{execute}}  
+Restart the code: `python3 Bot_public.py &`{{execute}}  
+Reopen the bot's code: `Bot_public.py`{{open}}  
 
 *Hint1: No hint here, it only reuses knowledge you have gained in the previous exercises*  
 *Solution: look at solution_3.py, and add the code where the hint comment for exercise 3 is. Don't forget to stop and restart the bot*  
 
-Restart the code: `python3 Bot_public.py`{{execute}}  
-Reopen the bot's code: `Bot_public.py`{{open}}
 Open the solution: `solution_3.py`{{open}}
 
 ## Other possibilities

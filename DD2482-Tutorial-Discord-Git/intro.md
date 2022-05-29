@@ -20,5 +20,10 @@ For this tutorial, we only require you to know the basics of Github and Discord 
 For both Github and Discord, the web version of the service should be enough.
 
 ## Plan
-The first step of this tutorial will guide you to make a repo and setting it up in order to enable handling by the bot, how to enable and invite bots on Discord, and will show you an easy way of doing a basic interaction between the bot and Github thanks to webhooks.  
-The second step will show you how you can write a bot to handle PRs in such a way that you can control what you want to do with them.
+This tutorial is spilt into two parts.  
+
+The first part is setting up the different tools.  
+It includes step 1 to 3, 1 being to setup the repo and its access, 2 setting up the webhook, 3 creating the bot proper
+
+The second part is exercises on the different functionalities available.  
+It includes step 4 to 6, 4 being adding a command, 5 adding a new action on a reaction, 6 combining the knowledge on a final exercise.
